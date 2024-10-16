@@ -324,8 +324,6 @@ class BlumTod:
                         for task in _tasks:
                             await self.solve(task)
         if self.cfg.auto_game:    
-            game = True
-            while game:
                 res = await self.http(balance_url, self.headers)
                 play = res.json().get("playPasses")
                 if play is None:
