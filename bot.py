@@ -328,7 +328,7 @@ class BlumTod:
                 play = res.json().get("playPasses")
                 if play is None:
                     self.log(f"{yellow}failed get game ticket !")
-                    break
+                else:
                 self.log(f"{green}you have {white}{play}{green} game ticket")
                 if play <= 0:
                     break
