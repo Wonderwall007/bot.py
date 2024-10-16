@@ -330,8 +330,6 @@ class BlumTod:
                     self.log(f"{yellow}failed get game ticket !")
             else:
                 self.log(f"{green}you have {white}{play}{green} game ticket")
-                if play <= 0:
-                    break
         res = await self.http(balance_url, self.headers)
         balance = res.json().get("availableBalance", 0)
         self.log(f"{green}balance :{white}{balance}")
